@@ -25,6 +25,8 @@ const uploadOnCloudinary = async (localfilePath, options = {}) => {
        return response;
        
     } catch (error) {
+
+        console.error("CLOUDINARY UPLOAD ERROR:", error);
         // delete the local file if it exists
 
         fs.unlinkSync(localfilePath); 
